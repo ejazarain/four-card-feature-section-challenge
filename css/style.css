@@ -1,0 +1,39 @@
+/*Main*/
+
+body {
+  background: #fafbfc;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  margin-top: 5%;
+  font-weight: 300;
+  font-size: 3rem;
+  color: #4d5061;
+  line-height: 1.5;
+}
+
+h2{
+  color: #4d5061;
+}
+
+p{
+  color: #adadb1;
+}
+.strong-h1{
+  font-weight: 700;
+  font-size: 3.05rem;
+}
+
+
+/*Footer Styles*/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
