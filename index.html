@@ -9,6 +9,10 @@
   <title>Frontend Mentor | Four card feature section</title>
 
   <style>
+    * {
+      margin: auto;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: hsl(0, 0%, 98%);
@@ -17,15 +21,21 @@
 
     h1 h2 {
       color: hsl(234, 12%, 34%);
-      text-align: center;
     }
 
     h1 {
       font-size: 40px;
     }
 
-    h2 {
-      margin: 0;
+    p {
+      color: hsl(229, 6%, 66%);
+      line-height: 2;
+    }
+
+    .center {
+      text-align: center;
+      width: 525px;
+      margin-top: 100px;
     }
 
     .header-top {
@@ -36,45 +46,19 @@
       font-weight: 600;
     }
 
-    p {
-      color: hsl(229, 6%, 66%);
-      line-height: 2;
-    }
-
-    .wrapper {
-      width: 1440px;
-      margin: auto;
-    }
-
-    .left,
-    .middle,
-    .right {
-      display: inline-block;
-    }
-
-    .left {
-      position: absolute;
-      top: 50%;
-      margin-left: 100px;
-    }
-
-    .right {
-      position: absolute;
-      top: 50%;
-    }
-
-    .center {
-      text-align: center;
-      margin: 100px 450px 0 450px;
+    .flex {
+      width: 1240px;
+      display: flex;
+      flex-direction: row;
     }
 
     .middle {
-      margin: 50px 50px 50px 525px;
+      margin: 50px;
     }
 
     .box {
       width: 320px;
-      height: 220px;
+      height: 215px;
       padding: 30px;
       background: hsl(0, 0%, 100%);
       -webkit-border-radius: 5px;
@@ -86,6 +70,12 @@
       border-top: 5px solid;
     }
 
+    .img {
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-position: 85% 85%;
+    }
+
     .supervisor {
       border-color: hsl(180, 62%, 55%);
       background-image: url(images/icon-supervisor.svg);
@@ -94,10 +84,10 @@
     .team-builder {
       border-color: hsl(0, 78%, 62%);
       background-image: url(images/icon-team-builder.svg);
+      margin-bottom: 50px;
     }
 
     .karma {
-      margin-top: 50px;
       border-color: hsl(34, 97%, 64%);
       background-image: url(images/icon-karma.svg);
     }
@@ -105,12 +95,6 @@
     .calculator {
       border-color: hsl(212, 86%, 64%);
       background-image: url(images/icon-calculator.svg);
-    }
-
-    .image {
-      background-repeat: no-repeat;
-      background-position: right bottom;
-      background-position: 85% 85%;
     }
 
     .attribution {
@@ -124,8 +108,36 @@
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 475px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
+      h1 {
+        font-size: 25px;
+      }
+
+      p {
+        padding: 25px 5px 50px 5px;
+      }
+
+      .center {
+        width: 375px;
+        margin-bottom: 50px;
+      }
+
+      .box {
+        width: 290px;
+        height: 185px;
+        margin-bottom: 50px;
+      }
+
+      .middle {
+        margin: 0;
+      }
+
+      .flex {
+        width: 375px;
+        flex-direction: column;
+      }
+
       .attribution {
-        font-size: 50px;
+        font-size: 11px;
       }
 
     }
@@ -140,28 +152,27 @@
       <h1><span class="header-top">Reliable, efficient delivery</span><br /><span class="header-bottom">Powered by Technology</span></h1>
       <p>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
     </div>
-    <div class="box-wrap">
+
+    <div class="flex">
       <div class="left">
-        <div class="box supervisor image">
+        <div class="box supervisor img">
           <h2>Supervisor</h2>
           <p>Monitors activity to identify project roadblocks</p>
         </div>
       </div>
-
       <div class="middle">
-        <div class="box team-builder image">
+        <div class="box team-builder img">
           <h2>Team Builder</h2>
           <p>Scans our talent network to create the optimal team for your project</p>
         </div>
 
-        <div class="box karma image">
+        <div class="box karma img">
           <h2>Karma</h2>
           <p>Regulary evaluates our talent to ensure quality</p>
         </div>
       </div>
-
       <div class="right">
-        <div class="box calculator image">
+        <div class="box calculator img">
           <h2>Calculator</h2>
           <p>Uses data from past projects to provide better delivery estimates</p>
         </div>
