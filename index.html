@@ -3,46 +3,177 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Four card feature section</title>
 
-  <title>Frontend Mentor | Four card feature section - By: Ejaz Arain</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: hsl(0, 0%, 98%);
+      font-size: 15px;
+    }
 
+    h1 h2 {
+      color: hsl(234, 12%, 34%);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    .header-top {
+      font-weight: 200;
+    }
+
+    .header-bottom {
+      font-weight: 600;
+    }
+
+    p {
+      color: hsl(229, 6%, 66%);
+      line-height: 2;
+    }
+
+    .wrapper {
+      width: 1440px;
+      margin: auto;
+    }
+
+    .left,
+    .middle,
+    .right {
+      display: inline-block;
+    }
+
+    .left {
+      position: absolute;
+      top: 50%;
+      margin-left: 100px;
+    }
+
+    .right {
+      position: absolute;
+      top: 50%;
+    }
+
+    .center {
+      text-align: center;
+      margin: 100px 450px 0 450px;
+    }
+
+    .middle {
+      margin: 50px 50px 50px 525px;
+    }
+
+    .box {
+      width: 320px;
+      height: 220px;
+      padding: 30px;
+      background: hsl(0, 0%, 100%);
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.2);
+      border-top: 5px solid;
+    }
+
+    .supervisor {
+      border-color: hsl(180, 62%, 55%);
+      background-image: url(images/icon-supervisor.svg);
+    }
+
+    .team-builder {
+      border-color: hsl(0, 78%, 62%);
+      background-image: url(images/icon-team-builder.svg);
+    }
+
+    .karma {
+      margin-top: 50px;
+      border-color: hsl(34, 97%, 64%);
+      background-image: url(images/icon-karma.svg);
+    }
+
+    .calculator {
+      border-color: hsl(212, 86%, 64%);
+      background-image: url(images/icon-calculator.svg);
+    }
+
+    .image {
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-position: 85% 85%;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 475px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+      .attribution {
+        font-size: 50px;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Reliable, efficient delivery<br /><span class="strong-h1">Powered by Technology</span></h1>
-  <p>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
 
-  <div class="box supervisor">
-    <h2>Supervisor</h2>
-    <p>Monitors activity to identify project roadblocks</p>
+  <div class="wrapper">
+
+    <div class="center">
+      <h1><span class="header-top">Reliable, efficient delivery</span><br /><span class="header-bottom">Powered by Technology</span></h1>
+      <p>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+    </div>
+    <div class="box-wrap">
+      <div class="left">
+        <div class="box supervisor image">
+          <h2>Supervisor</h2>
+          <p>Monitors activity to identify project roadblocks</p>
+        </div>
+      </div>
+
+      <div class="middle">
+        <div class="box team-builder image">
+          <h2>Team Builder</h2>
+          <p>Scans our talent network to create the optimal team for your project</p>
+        </div>
+
+        <div class="box karma image">
+          <h2>Karma</h2>
+          <p>Regulary evaluates our talent to ensure quality</p>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="box calculator image">
+          <h2>Calculator</h2>
+          <p>Uses data from past projects to provide better delivery estimates</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.ejazarain.com/">Ejaz Arain</a>.
+      </p>
+    </footer>
   </div>
-
-  <div class="box team-builder">
-    <h2>Team Builder</h2>
-    <p>Scans our talent network to create the optimal team for your project</p>
-  </div>
-
-  <div class="box karma">
-    <h2>Karma</h2>
-    <p>Regularly evaluates our talent to ensure quality</p>
-  </div>
-
-  <div class="box calculator">
-    <h2>Calculator</h2>
-    <p>Uses data from past projects to provide better delivery estimates</p>
-  </div>
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.ejazarain.com/">Ejaz Arain</a>.
-    </p>
-  </footer>
 </body>
 
 </html>

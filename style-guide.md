@@ -9,6 +9,9 @@ The designs were created to the following widths:
 
 ## Colors
 
+- background: hsl(0, 0%, 98%)
+- box background: hsl(0, 0%, 100%)
+
 ### Primary
 
 - Red: hsl(0, 78%, 62%)
